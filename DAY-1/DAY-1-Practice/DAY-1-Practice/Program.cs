@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DAY_1_Practice
 {
     internal class Program
@@ -27,10 +28,16 @@ namespace DAY_1_Practice
             Console.WriteLine(myLetter);
             bool myBool = true; 
             Console.WriteLine(myBool);
+            //concatenation string
             string first_name = "kshitij";
             string last_name = "wankar";
-            last_name=first_name+last_name;
-            Console.WriteLine(last_name);
+            name=first_name+last_name;
+            Console.WriteLine(name);
+            Console.WriteLine(string.Concat(first_name, last_name));
+            // using substrings
+            int charpos = name.IndexOf("w");
+            string lname = name.Substring(charpos);
+            Console.WriteLine(lname);
             // like above you can do same for integers
             int num1, num2, num3;
             num1 = 20;
@@ -59,6 +66,100 @@ namespace DAY_1_Practice
             bool my_bool = true;
             Console.WriteLine(Convert.ToInt32(my_bool));
             Console.WriteLine(Convert.ToInt32(my_double));
+            //input
+            Console.WriteLine("enter your name:");
+            string userName = Console.ReadLine();
+            Console.WriteLine("username is:" + userName);
+            // for int 
+            Console.WriteLine("enter your age");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("your age is "+age);
+            Console.WriteLine("enter your year");
+            int year = Convert.ToInt32(Console.ReadLine());
+            //task 1
+            Console.WriteLine("the sum of age and year is:"+(age+year));
+            //using switch
+            int day = 4;
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+            }
+            //using while
+            int q = 4;
+            while (q > 0)
+            {
+                Console.WriteLine("hello");
+                q -= 1;
+            }
+            //do while loop
+            int k = 0;
+            do
+            {
+                Console.WriteLine("hello");
+            }
+            while(k > 0);//only executes once
+            // task 2
+            for(int i = 1; i <= 20; i++)
+            {
+                Console.WriteLine(i);
+            }
+            //nested loops
+            // Outer loop
+            for (int i = 1; i <= 2; ++i)
+            {
+                Console.WriteLine("Outer: " + i);  // executes 2 times
+
+                // Inner loop
+                for (int j = 1; j <= 3; j++)
+                {
+                    Console.WriteLine(" Inner: " + j); // executes 6 times (2 x 3)
+                }
+            }
+            //using for each
+            string[] cars = { "ford", "volvo", "bmw", "mazda" };
+            foreach(string s in cars)
+            {
+                Console.WriteLine(s);
+            }
+            //using break 
+            for(int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("using continue statement");
+            //continue
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
         }
     }
 }
