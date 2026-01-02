@@ -165,13 +165,24 @@ namespace DAY_1_Practice
             Console.WriteLine("enter the number to check if its even or not");
             int even_odd = Convert.ToInt32(Console.ReadLine());
             IsEven(even_odd);
+
+            //using return value methods
+            int Z1 = MyMethod2(3);
+            Console.WriteLine(Z1);
+
+            //using named args
+            Namedarg(child3:"john",child1:"lola",child2:"aster");
+
+            //using method overloading
+            Console.WriteLine("double is:"+PlusMethodInt(5, 6));
+            Console.WriteLine("int is:"+PlusMethoddouble(4.6,2.3));
         }
         // using methods 
         static void MyMethod()
         {
             Console.WriteLine("i just got executed");
         }
-        //task 3 
+        //task 3 using parameters and passing an argument
         static void IsEven(int n)
         {
             if (n % 2 == 0)
@@ -182,6 +193,23 @@ namespace DAY_1_Practice
             {
                 Console.WriteLine("the number is odd");
             }
+        }
+        static int MyMethod2(int x)
+        {
+            return 5 + x;
+        }
+        // named arguments 
+        static void Namedarg(string child1,string child2,string child3)
+        {
+            Console.WriteLine("the youngest child is :"+child3);
+        }
+         static int PlusMethodInt(int n,int m)
+        {
+            return n + m;
+        }
+        static double PlusMethoddouble(double n,double m)
+        {
+            return n + m;
         }
     }
 
