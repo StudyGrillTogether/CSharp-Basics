@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -160,6 +161,28 @@ namespace DAY_1_Practice
                 }
                 Console.WriteLine(i);
             }
+            MyMethod();
+            Console.WriteLine("enter the number to check if its even or not");
+            int even_odd = Convert.ToInt32(Console.ReadLine());
+            IsEven(even_odd);
+        }
+        // using methods 
+        static void MyMethod()
+        {
+            Console.WriteLine("i just got executed");
+        }
+        //task 3 
+        static void IsEven(int n)
+        {
+            if (n % 2 == 0)
+            {
+                Console.WriteLine("the number is even");
+            }
+            else
+            {
+                Console.WriteLine("the number is odd");
+            }
         }
     }
+
 }
