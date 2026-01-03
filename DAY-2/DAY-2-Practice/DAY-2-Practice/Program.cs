@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace DAY_2_Practice
 {
+    //task1
+    class person
+    {
+        public string name;
+        public int age;
+        public  void Introduce()
+        {
+            Console.WriteLine("my name is: "+name+"my age is "+age);
+        }
+    }
     class car //using multiple classes
     {
         public string color = "red";
