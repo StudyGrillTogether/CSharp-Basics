@@ -97,11 +97,19 @@ namespace DAY_3_PRACTICE
     //understanding static vs nonstatic
     class Example
     {
-        int x; //Non static variable //x belongs to each object
-        static int y = 200; //y belongs to the class itsel
+        public int x; //Non static variable //x belongs to each object
+        public static int y = 200; //y belongs to the class itsel
         public Example(int x)
         {
             this.x = x;
+        }
+        static void Add(int x)
+        {
+            //this is a static block 
+            // we can access non static members x with the help of object only 
+            //with the help of class name
+       
+            Console.WriteLine("sum of 100 and 200 is:"+x+Example.y);
         }
     }
 
@@ -133,6 +141,19 @@ namespace DAY_3_PRACTICE
             Bank.Amount = 1000;
             Console.WriteLine(Bank.Amount);
             //if we wrote negative it gives an error
+
+            //accessing static variable using class name
+            //before object creation
+            Console.WriteLine($"Static Variable Y={Example.y}");
+            //accessing the static variable without using class name
+            //its possible cuz we are accessing the vatiable from same class
+            // Console.WriteLine($"static varaible Y={y}"); you cannot access this since in different class
+            //static vs non static
+            Example obj1 = new Example(50);
+            Example obj2 = new Example(100);//hence each object gets its own x
+            Console.WriteLine(obj1.x + Example.y);
+
+            
             }
         }
     
