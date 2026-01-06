@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO.Pipes;
 using System.Linq;
 using System.Text;
@@ -103,14 +104,7 @@ namespace DAY_3_PRACTICE
         {
             this.x = x;
         }
-        static void Add(int x)
-        {
-            //this is a static block 
-            // we can access non static members x with the help of object only 
-            //with the help of class name
-       
-            Console.WriteLine("sum of 100 and 200 is:"+x+Example.y);
-        }
+        
     }
 
     internal class Program
@@ -152,6 +146,7 @@ namespace DAY_3_PRACTICE
             Example obj1 = new Example(50);
             Example obj2 = new Example(100);//hence each object gets its own x
             Console.WriteLine(obj1.x + Example.y);
+            
 
             
             }
