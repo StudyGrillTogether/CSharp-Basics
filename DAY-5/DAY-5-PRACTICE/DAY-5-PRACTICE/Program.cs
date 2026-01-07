@@ -68,7 +68,27 @@ namespace DAY_5_PRACTICE
 
         
     }
-    
+
+    //using abstract classes
+    abstract class Animal1
+    {
+        //abstrct method does not have a body
+        public abstract void animalsound();
+        public void slepp()
+        {
+            Console.WriteLine("zzz");
+        }
+    }
+    //you cannot create objects via abstract classes
+
+    //deived class inherited from animal1
+    class pig1 : Animal1
+    {
+        public override void animalsound()
+        {
+            Console.WriteLine("the pig says: wee wee");
+        }
+    }
 
     internal class Program
     {
@@ -95,6 +115,11 @@ namespace DAY_5_PRACTICE
             calculator obj1=new calculator();
             
             Console.WriteLine($"the sum of two numbers 1 and 2 is: {obj1.add(1, 2)} and 1,2,3,4 is {obj1.add(1,2,3,4)} and 2.4 and 5.6 is {obj1.add(2.4,5.4)}");
+
+            //using abstract classes and methods
+            pig1 mypig1 = new pig1();//creating pig object
+            mypig1.animalsound();//call the abstract method
+            mypig1.slepp();
 
         }
     }
