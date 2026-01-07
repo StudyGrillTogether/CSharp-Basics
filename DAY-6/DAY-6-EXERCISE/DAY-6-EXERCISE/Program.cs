@@ -116,8 +116,70 @@ namespace DAY_6_EXERCISE
         }
         //this is implemetation using interface name we dont need to use public acces modifier
     }
-    
 
+    //implementing composition of interfaces
+    //each interface does one job
+    interface iprintable
+    {
+        void print();
+    }
+
+    interface Iscannable
+    {
+        void scan();
+    }
+
+    interface Ifaxable
+    {
+        void fax();
+    }
+
+    //compose them in one class
+    //no inheritance 
+    //multiple behaviors
+    //clean and flexibel
+    class multifactorprinter : iprintable, Iscannable, Ifaxable
+    {
+        public void print()
+        {
+            Console.WriteLine("printing document");
+        }
+
+        public void scan()
+        {
+            Console.WriteLine("scanning a document");
+        }
+
+        public void fax()
+        {
+            Console.WriteLine("sending a fax");
+        }
+    }
+
+    //implememting multi level inheritance
+    //when one class derived from another
+    class A
+    {
+        public void write()
+        {
+            Console.Write("hello");
+        }
+    }
+    class B : A
+    {
+        public void write2()
+        {
+            Console.Write(" my name is");
+        }
+    }
+
+    class C : B
+    {
+        public void write3()
+        {
+            Console.Write(" kshitij");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -143,6 +205,12 @@ namespace DAY_6_EXERCISE
             democlass newobj2=new democlass();
             newobj2.method();
             newobj2.myothermethod();
+
+            //implemeting multilevel inheritance
+            C newobj4 = new C();
+            newobj4.write();
+            newobj4.write2();
+            newobj4.write3();
             
         }
     }
