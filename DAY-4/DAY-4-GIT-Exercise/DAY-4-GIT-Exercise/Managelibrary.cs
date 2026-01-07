@@ -22,7 +22,8 @@ namespace DAY_4_GIT_Exercise
             {
                 if (!book.IsBorrowed)
                 {
-                    Console.WriteLine(book.title);
+                    
+                    Console.WriteLine($"title:{book.title}  id:{book.id}");
                     //checks if the book is not borrowed and tells us
                 }
             }
