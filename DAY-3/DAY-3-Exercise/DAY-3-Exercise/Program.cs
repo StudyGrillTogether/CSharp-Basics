@@ -21,14 +21,11 @@ namespace DAY_2_Git_exercise
             }
             set
             {
-                if (value < 0)
+                if (value > 0)
                 {
-                    throw new ArgumentException("please pass a positive value");
+                    age = value;
                 }
-                else
-                {
-                    age=value;
-                }
+                
             }
         }
         //person has an adaress

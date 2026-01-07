@@ -126,16 +126,6 @@ namespace DAY_4_Practice
                 Console.WriteLine("name found is:" + found.Name);
             }
 
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
