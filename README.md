@@ -1,3 +1,10 @@
+# 📘 OOP Learning Plan – C# (.NET)
+
+This repository documents my step-by-step learning of Object-Oriented Programming (OOP) in C#, including theory, practice, and GitHub exercises.
+
+---
+
+
 # csharp
 # DAY1
 
@@ -116,4 +123,166 @@
 2. Create list Library which holds List<Book>
 3. Add features - Add book to the Library, List all availble books, Boorow and Return books by Id
 
+
+
+## 📅 Day 5 – Inheritance & Polymorphism
+
+### 🎯 Goals
+- Understand IS-A relationships
+- Learn and apply Inheritance and Polymorphism
+
+---
+
+### 📖 Theory
+
+#### Inheritance in C#
+- What is inheritance in C#
+- How inheritance works
+- Why inheritance is used
+- Multiple inheritance (theory only – not supported in C#)
+
+#### Polymorphism
+- What is polymorphism
+- Why polymorphism is useful
+- Types of polymorphism:
+  - Method Overloading
+  - Method Overriding
+
+#### Keywords
+- virtual
+- override
+
+#### Design Consideration
+- When not to use inheritance
+
+---
+
+### 🧪 Practice
+
+#### Animal Inheritance Example
+- Create a base class `Animal`
+- Create derived classes:
+  - `Dog`
+  - `Cat`
+- Create a method `Speak()` in `Animal`
+- Override `Speak()` in each derived class
+- Loop through a list of animals and call `Speak()`
+
+---
+
+### 🧠 Git Exercise – Shapes Inheritance
+
+- Create an abstract class `Shape`
+  - Method: `GetArea()`
+- Create derived classes:
+  - `Circle`
+  - `Rectangle`
+  - `Triangle`
+- Override `GetArea()` in each class
+- Print areas for a list of shapes
+
+---
+
+## 📅 Day 6 – Interfaces
+
+### 📖 Theory
+
+#### Types of Inheritance
+- Class inheritance
+- Interface inheritance
+
+#### Interfaces
+- What is an interface
+- Why interfaces are used
+- How interfaces work
+- CAN-DO relationship (not IS-A)
+
+#### Additional Topics
+- Examples of different types of inheritance
+- Examples of interfaces
+- Composition using interfaces
+
+---
+
+### 🧪 Practice
+
+#### Logger Interface
+- Create an interface `ILogger`
+- Create `ConsoleLogger`
+- Use `ILogger` inside another class
+
+---
+
+### 🧠 Git Exercise – Notifier Interfaces
+
+- Create an interface `INotifier`
+  - Method: `Send(string message)`
+- Create two classes:
+  - `ConsoleNotifier`
+  - `EmailNotifier`
+- Create `OrderService` class
+  - Uses `INotifier` to send updates
+  - Use constructor injection
+- In `Program.cs`:
+  - Switch notifier type
+  - Observe different behavior
+
+---
+
+## 📅 Day 7 – Abstraction & Capstone (OOP Integration)
+
+### 📖 Theory
+
+1. What abstraction means (practical understanding)
+   - User cares about what a class does
+   - User does not care how it does it
+2. When to use abstraction
+3. Abstraction vs Encapsulation
+4. Recap of all OOP concepts learned
+
+---
+
+### 🧠 Practice (No Coding)
+
+#### Identify Abstractions
+
+Answer:
+1. Should `Program.cs` care where tasks are stored?
+2. Should it care what operations are possible?
+
+Write down:
+- One interface name for task storage
+- One interface name for task operations
+
+#### Method Signatures Only (No Implementations)
+- Task Creation
+- Task Completion
+- Get All Tasks
+
+Use interface-first thinking.
+
+---
+
+## 🧠 GitHub Capstone – Task Tracker
+
+### 📦 Model
+
+Create a class `TaskItem` with:
+- `int Id`
+- `string Title`
+- `bool IsCompleted`
+
+#### Method
+- `MarkCompleted()`
+
+---
+
+### 🧩 Repository Abstraction
+
+Create an interface `ITaskRepository` with methods:
+
+```csharp
+void Add(TaskItem task);
+List<TaskItem> GetAll();
+TaskItem GetById(int id);
 
